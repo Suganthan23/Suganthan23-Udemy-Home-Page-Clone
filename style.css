@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Gabarito", sans-serif;
+}
+
+/* ------------------- NAVBAR ------------------- */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid black;
+    background-color: white;
+    gap: 10px;
+}
+
+.navbar__logo {
+    width: 100px;
+    height: 34px;
+    vertical-align: middle;
+}
+
+/* Mobile view: center logo */
+@media (max-width: 768px) {
+    .navbar__s1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.navbar__s2 {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 10px 15px;
+    flex: 1;
+    max-width: 425px;
+    gap: 10px;
+}
+
+.navbar__s2 input {
+    border: none;
+    width: 100%;
+    font-size: 17px;
+    outline: none;
+    background: transparent;
+}
+
+.navbar__s3 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.navbar__s3 p {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.navbar__s3 i {
+    cursor: pointer;
+    font-family: "Font Awesome 6 Free";
+    /* Ensure correct icon font */
+    font-weight: 900;
+    /* Required for fa-solid icons */
+}
+
+
+/* ------------------- CATEGORIES ------------------- */
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+    gap: 10px;
+}
+
+.categories p {
+    background-color: #892DE1;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 15px;
+    text-align: center;
+    flex: 1 1 150px;
+    max-width: 150px;
+    font-size: 16px;
+}
+
+/* ------------------- SALE IMAGE ------------------- */
+.sale-image img {
+    width: 100%;
+    height: auto;
+    margin-top: 3px;
+}
+
+/* ------------------- RECOMMENDED COURSES ------------------- */
+.recommended__container {
+    padding: 20px;
+    max-width: 1200px;
+    text-align: left;
+}
+
+.recommended__container h1,
+.topics__title,
+.popular__title {
+    font-family: "Righteous", serif;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+.recommended__container h1 {
+    margin-left: 0px;
+}
+
+.recommended__container p {
+    font-size: 18px;
+}
+
+.topics__title,
+.popular__title {
+    margin-left: 10px;
+}
+
+.course__card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card {
+    border: 0.5px solid bisque;
+    border-radius: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    text-align: left;
+    background-color: white;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin-top: 15px;
+    flex-grow: 1;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 0.5px solid bisque;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-top: auto;
+    /* ⬅ Push rating to bottom */
+}
+
+/* ------------------- TOPICS ------------------- */
+.topics {
+    padding: 10px;
+}
+
+.topics__container {
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.topics__container p {
+    border: solid 1px blanchedalmond;
+    padding: 10px;
+    flex-grow: 1;
+    text-align: center;
+    flex-basis: 25%;
+}
+
+/* ------------------- POPULAR COURSES ------------------- */
+.popular {
+    padding: 10px;
+}
+
+.popular__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.popular-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    width: 280px;
+    height: auto;
+    border: 0.5px solid bisque;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.popular-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.popular-card h3,
+.popular-card p {
+    margin: 5px 0;
+    width: 100%;
+    text-align: left;
+}
+
+.popular-card p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Reuse unified .rating style */
+.popular-card .rating {
+    margin-top: auto;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar__s2 {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .navbar__s3 {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .categories {
+        justify-content: center;
+    }
+
+    .card,
+    .popular-card {
+        width: 90%;
+    }
+
+    .topics__container p {
+        flex-basis: 45%;
+    }
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background-color: #202230;
+    color: white;
+    text-align: center;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 14px;
+    flex-wrap: wrap;
+    border-bottom:#333 1px solid;
+    margin-top: 20px;
+}
+
+.footer__container h2 {
+    padding-bottom: 10px;
+}
+
+.about {
+    padding-left: 20px;
+}
+
+.Legal&Accessibility {
+    padding-right: 20px;
+}
+
+.bottom-container {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background-color: #202230;
+    color: white;
+    text-align: center;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 14px;
+    flex-wrap: wrap;
+    border-bottom:#333 1px solid;
+    padding-left: 40px;
+}
+
+.bottom-left, .bottom-right {
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom-left p{
+    margin-left: 18px;
+    margin-top: 10px;
+    font-size: larger;
+}
+
+.bottom-right p {
+    margin-right: 20px;
+    margin-left: 4px;
+    font-size: 18px;
+}
+
+.bottom-right i {
+    padding-top: 3px;
+    padding-right: 2px;
+}
+
+.bottom-right {
+    margin-top: 10px;
+}
