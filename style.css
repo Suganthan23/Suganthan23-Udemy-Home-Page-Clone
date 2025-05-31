@@ -18,6 +18,9 @@ body {
     border-bottom: 1px solid black;
     background-color: white;
     gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .navbar__logo {
@@ -74,6 +77,26 @@ body {
     /* Required for fa-solid icons */
 }
 
+.mylearning {
+    position: relative;
+    cursor: pointer;
+}
+
+.mylearning-popup {
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    width: 110px;
+    top: 150%;
+    padding: 10px;
+    right: 0;
+    display: none;
+}
+
+.mylearning:hover .mylearning-popup {
+    display: block;
+}
+
 
 /* ------------------- CATEGORIES ------------------- */
 .categories {
@@ -99,11 +122,6 @@ body {
 }
 
 /* ------------------- SALE IMAGE ------------------- */
-.sale-image img {
-    width: 100%;
-    height: auto;
-    margin-top: 3px;
-}
 
 /* ------------------- RECOMMENDED COURSES ------------------- */
 .recommended__container {
@@ -114,10 +132,11 @@ body {
 
 .recommended__container h1,
 .topics__title,
-.popular__title {
-    font-family: "Righteous", serif;
+.popular__title,
+.sale-image-offer h1 {
+    font-family: "DM Serif Display", serif;
     font-weight: lighter;
-    font-size: 30px;
+    font-size: 34px;
 }
 
 .recommended__container h1 {
@@ -342,4 +361,37 @@ body {
 
 .bottom-right {
     margin-top: 10px;
+}
+
+
+.sale-image {
+    position: relative;
+}
+
+.sale-image img {
+    width: 100%;
+}
+
+.sale-image-offer {
+    position: absolute;
+    width: 30%;
+    top: 18%;
+    left: 5%;
+    background-color: white;
+    color: black;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+.sale-image-offer p {
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.sale-image-offer h3 {
+    background-color: #6D28D2;
+    color: white;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 10px;
 }
